@@ -37,6 +37,6 @@ ggplot(data= diamonds, aes(x= carat, y= price))+
 
 ```{r}
 #Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
-ggplot(data= diamonds,aes(x= carat))+
+ggplot(data= diamonds, aes(x= carat))+
   geom_histogram()
 ```
