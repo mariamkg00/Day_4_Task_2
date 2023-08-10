@@ -2,10 +2,41 @@
 title: "Day_4_Task_2"
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## Setup chunk
 
 ```{r}
-1 + 1
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+summary(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+
+skimr::skim(diamonds)
+
+#making a plot using ggpairs
+
+ggpairs(diamonds)
+```
+
+```{r}
+#Create a basic ggplot scatterplot of diamond price (price) as a function of size (carat)
+
+ggplot(data= diamonds, aes(x= carat, y= price))+
+  geom_point()
+```
+
+```{r}
+#Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
+ggplot(data= diamonds,aes(x= carat))+
+  geom_histogram()
 ```
