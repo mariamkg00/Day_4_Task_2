@@ -38,5 +38,12 @@ ggplot(data= diamonds, aes(x= carat, y= price))+
 ```{r}
 #Create a histogram showing the distribution of values in the carat column (recall: a histogram only requires a single variable, e.g. aes(x = carat))
 ggplot(data= diamonds, aes(x= carat))+
-  geom_histogram()
+  geom_histogram(fill ="pink", color= "purple")
+```
+
+```{r}
+#Create a boxplot (see: geom_box) of diamond clarity (on the x-axis) and price (y-axis).
+ggplot(data = diamonds, aes(x=clarity, y= price))+
+  geom_boxplot()
+
 ```
